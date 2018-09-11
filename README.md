@@ -12,7 +12,7 @@
 
 ```
 $ cd /path/to/mpaligner_0.97
-$ cat /path/to/np108/np108_gg.txt | ./script/separate_for_char.pl utf8 \
+$ cut -f 1,2 -d "	" /path/to/np108/np108_gg.txt | ./script/separate_for_char.pl utf8 \
 source/joint_chars.utf8.txt > source/np108_gg.utf8.char_unit
 $ ./mpaligner -i source/np108_gg.utf8.char_unit
 $ ruby get_yomi.rb source/np108_gg.utf8.char_unit.align | LC_ALL=C sort \
